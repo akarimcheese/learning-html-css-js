@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <div>
+            <h1 id="TitleText">Understanding Utility</h1>
+        </div>
+        <div id="aboveGround">
+            <div id="person">
+                <p id="burgerCounter">0</p>
+                <div>
+                    <img class="heart" id="heart" src="heart.png">
+                </div>
+                <div>
+                    <img class="teardrop" id="teardrop" src="teardrop.png">
+                </div>
+                <div id="head">
+                    <div class="eye" id="eye1">
+                        <div class="pupil" id="pupil1"></div>
+                    </div> 
+                    <div class="eye" id="eye2">
+                        <div class="pupil" id="pupil2"></div>
+                    </div>
+                    <div id="mouth"></div>
+                </div>
+                <div class="arm" id="l_arm"></div>
+                <div id="torso"></div>
+                <div class="arm" id="r_arm"></div>
+                <div class="leg" id="l_leg"></div>
+                <div class="leg" id="r_leg"></div>
+            </div>
+            <div id="conveyorBeltContainer">
+                <div id="belt1"></div>
+            </div>
+            <div id="wheelContainer">
+                <div id="wheel1"></div>
+            </div>
+            <div id="conveyorBeltContainer2">
+                <div id="belt2"></div>
+            </div>
+            <div id="wheelContainer2">
+                <div id="wheel2"></div>
+            </div>
+            <div id="burgerBound">
+                <div class="burger" id="burger">
+                    <div class="topping" id="bunTop"></div>
+                    <div class="topping" id="topping1"></div>
+                    <div class="topping" id="topping2"></div>
+                    <div class="topping" id="topping3"></div>
+                    <div class="topping" id="topping4"></div>
+                    <div class="topping" id="bunBottom"></div>
+                </div>
+            </div>
+        </div>
+        <div id="ground">
+            <button id="burgerDeploy" onclick="burgerAnimation()">Deploy Burger</button>
+        </div>
+        
+        <script>
+            var burgerCount = 0;
+            var width = 30;
+            var roundness = 5;
+            var marginLeft = 25;
+            var eyeHeight = 10;
+            var mouthMargin = 15;
+            
+            function burgerAnimation() {
+                var elm = document.getElementById('burger');
+                var newone = elm.cloneNode(true);
+                elm.id = "toBeDeleted";
+                elm.parentNode.appendChild(newone);
+                elm.style.webkitAnimationPlayState = 'running';
+                burgerCount++;
+                var tempCount = burgerCount;
+                setTimeout(function() {elm.parentNode.removeChild(elm); 
+                                      document.getElementById('burgerCounter').innerHTML = tempCount;
+                                        if (tempCount < 4) {
+                                        heartAnimation();
+                                        } else if (tempCount < 8) {
+                                        sweatAnimation();
+                                        } else if (tempCount < 10) {
+                                        deathAnimation();}}, 5000);
+            }
+            
+            function heartAnimation() {
+                var elm = document.getElementById('heart');
+                var newone = elm.cloneNode(true);
+                elm.id = "toBeDeleted";
+                elm.parentNode.appendChild(newone);
+                elm.style.webkitAnimationPlayState = 'running';
+                setTimeout(function() {elm.parentNode.removeChild(elm);}, 2000);
+            }
+            
+            function sweatAnimation() {
+                biggerBelly();
+                var elm = document.getElementById('teardrop');
+                var newone = elm.cloneNode(true);
+                elm.id = "toBeDeleted";
+                elm.parentNode.appendChild(newone);
+                elm.style.webkitAnimationPlayState = 'running';
+                setTimeout(function() {elm.parentNode.removeChild(elm);}, 2000);
+            }
+            
+            function deathAnimation() {
+                eyeHeight--;
+                mouthMargin += 2;
+                document.getElementById('eye1').style.height = eyeHeight + "px";
+                document.getElementById('eye2').style.height = eyeHeight + "px";
+                document.getElementById('pupil1').style.webkitAnimationPlayState = 'running';
+                document.getElementById('pupil2').style.webkitAnimationPlayState = 'running';
+                document.getElementById('mouth').style.marginTop = mouthMargin + "px";
+            }
+            
+            function biggerBelly() {
+                width += 4;
+                marginLeft -= 2;
+                roundness += 2;
+                var elm = document.getElementById('torso');
+                elm.style.width = width + "px"
+                elm.style.marginLeft = marginLeft + "px";
+                elm.style.borderRadius = roundness + "px";
+            }
+        </script>
+    </body>
+</html>
