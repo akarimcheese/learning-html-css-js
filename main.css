@@ -1,0 +1,368 @@
+body {
+    background-color: rgb(100, 180, 200);
+}
+
+h1 {
+    position: absolute;
+    top: 50px;
+    left: 5em;
+    font-family: sans-serif;
+    color: white;
+}
+
+#aboveGround {
+    width: 100%;
+    height: 120px;
+}
+
+#person {
+    margin-top: 180px;
+    margin-left: 50px;
+    width: 80px;
+    height: 120px;
+}
+
+#burgerCounter {
+    position: absolute;
+    margin-top: -25px;
+    margin-left: 33px;
+    font-size: 20px;
+    font-family:sans-serif;
+}
+
+.heart {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    -webkit-transform: rotate(-20deg);
+    -webkit-animation: heartAppear 1s forwards linear;
+    -webkit-animation-play-state: paused;
+}
+
+.teardrop {
+    position: absolute;
+    height: 25px;
+    margin-left: 2px;
+    -webkit-animation: sweatAppear 1s forwards linear;
+    -webkit-animation-play-state: paused;
+}
+#head {
+    height: 60px;
+    width: 80px;
+    border-radius: 50px;
+    background-color: tan;
+}
+
+.eye {
+    height: 10px;
+    width: 12px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+#eye1 {
+    position: relative;
+    margin-left: 48px;
+    top: 13px;
+}
+
+#eye2 {
+    position: relative;
+    margin-left: 20px;
+    top: 3px;
+}
+
+.pupil {
+    position: relative;
+    height: 4px;
+    width: 4px;
+    left: 4px;
+    top: 3px;
+    border-radius: 2px;
+    background-color: black;
+    -webkit-animation: eyeDead 1s forwards linear;
+    -webkit-animation-play-state: paused;
+}
+
+#mouth {
+    width: 40px;
+    height: 10px;
+    border-radius: 2px;
+    margin-top: 15px;
+    margin-left: 20px;
+    background-color: black;
+}
+
+.arm {
+    position: relative;
+    width: 10px;
+    height: 30px;
+    border-radius: 2px;
+    background-color: tan;
+}
+
+#l_arm {
+    top: 5px;
+    left: 20px;
+}
+
+#r_arm {
+    margin-top: -35px;
+    left: 50px;
+}
+
+#torso {
+    margin-top: -30px;
+    margin-left: 25px;
+    height: 40px;
+    width: 30px;
+    border-radius: 5px;
+    background-color: red;
+    transition: width 1s;
+    transition: margin-left 1s;
+    transition: border-radius 1s;
+}
+
+.leg {
+    height: 20px;
+    width: 10px;
+    border-radius: 3px;
+    background-color: blue;
+}
+
+#l_leg {
+    position: relative;
+    top: 5px;
+    left: 28px;
+}
+
+#r_leg {
+    position: relative;
+    top: -15px;
+    left: 42px;
+}
+
+#conveyorBeltContainer {
+    overflow: hidden;
+    position: absolute;
+    width: 450px;
+    border-radius: 10px;
+    margin-left: 140px;
+    top: 200px;
+    height: 10px;
+}
+
+#belt1 {
+    position: absolute;
+    width: 510px;
+    margin-left: -54px;
+    border-style: dashed;
+    
+    border-radius: 10px;
+    -webkit-animation: moveDash 2.5s infinite linear;
+}
+
+#wheelContainer {
+    position: absolute;
+    height: 67px;
+    width: 25px;
+    top: 200px;
+    margin-left: 115px;
+    overflow: hidden;
+}
+
+#wheel1 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-style: dashed;
+    border-width: 5px;
+    border-radius: 50px;
+    -webkit-animation: rotateDash 9s infinite linear;
+}
+
+#conveyorBeltContainer2 {
+    overflow: hidden;
+    position: absolute;
+    width: 450px;
+    border-radius: 10px;
+    margin-left: 140px;
+    top: 254px;
+    height: 10px;
+}
+
+#belt2 {
+    position: absolute;
+    width: 510px;
+    margin-left: -54px;
+    border-style: dashed;
+    border-radius: 10px;
+    -webkit-animation: moveDash 2.5s reverse infinite linear;
+}
+
+#wheelContainer2 {
+    position: absolute;
+    height: 67px;
+    width: 25px;
+    top: 200px;
+    margin-left: 590px;
+    overflow: hidden;
+}
+
+#wheel2 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin-left: -35px;
+    border-style: dashed;
+    border-width: 5px;
+    border-radius: 50px;
+    -webkit-animation: rotateDash 9s infinite linear;
+}
+
+#burgerBound {
+    position: absolute;
+    top: 0px;
+    height: 225px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.burger {
+    position: absolute;
+    left: 500px;
+    top: -40px;
+    height: 30px;
+    width: 40px;
+    -webkit-transform: rotate(-30deg);
+    -webkit-animation: burgerProcess 5s forwards linear;
+    -webkit-animation-play-state: paused;
+}
+
+.topping {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#bunTop {
+     height: 10px;
+    background-color: tan;
+}
+
+#topping1 {
+    height: 4px;
+    background-color: brown;
+}
+
+#topping2 {
+    height: 2px;
+    background-color: yellow;
+}
+
+#topping3 {
+    height: 1px;
+    background-color: red;
+}
+
+#topping4 {
+    height: 3px;
+    background-color: green;
+}
+
+#bunBottom {
+     height: 10px;
+    background-color: tan;
+}
+
+#ground {
+    width: 100%;
+    height: 300px; 
+    background-color: rgb(80, 130, 180);
+}
+
+#burgerDeploy {
+    margin-top: 50px;
+    margin-left: 300px;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border-width: thick;
+    border-color: darkorange;
+    border-style: groove;
+    border-top-style: hidden;
+    border-left-style: hidden;
+    background-color: orange;
+    font-family: sans-serif;
+    font-size: 19px;
+    font-variant: small-caps;
+}
+
+#burgerDeploy:active {
+    border-style: inset;
+}
+
+@-webkit-keyframes moveDash {
+    from { -webkit-transform: translateX(54px); }
+    to   { -webkit-transform: translateX(0px); }
+}
+
+@-webkit-keyframes rotateDash {
+    from { -webkit-transform: rotate(0deg); }
+    to   { -webkit-transform: rotate(-360deg); }
+}
+
+@-webkit-keyframes burgerProcess {
+    0%  { top: -40px;
+            left: 500px;}
+    10% { top: 165px;
+         -webkit-transform: rotate(-30deg);
+        left: 500px;}
+    12% {-webkit-transform: rotate(45deg); }
+    14% { top: 130px;
+        left: 480px;
+        -webkit-transform: rotate(100deg); }
+    16% {-webkit-transform: rotate(140deg); }
+    19% { top: 166px;
+        left: 460px; 
+        -webkit-transform: rotate(170deg); }
+    21% { top: 166px;
+        left: 450px;
+        -webkit-transform: rotate(190deg); }
+    25% { top: 168px;
+        -webkit-transform: rotate(180deg);}
+    90% { left: 120px;
+            top: 168px;
+            -webkit-transform: rotate(180deg);}
+    95% { top: 180px; 
+            -webkit-transform: rotate(140deg);}
+    100% { left: 50px;
+            top: 260px;
+            -webkit-transform: rotate(85deg);}
+}
+
+@-webkit-keyframes heartAppear {
+    0% {opacity: 0;
+        margin-left: 0px;
+        margin-top: 0px;}
+    50% {opacity: 1;
+        margin-left: -10px;
+        margin-top: -10px;}
+    100% {opacity: 0;
+        margin-left: -20px;
+        margin-top: -20px;}
+}
+
+@-webkit-keyframes sweatAppear {
+    0% {opacity: 0;
+        margin-top: 0px;}
+    50% {opacity: 1;
+        margin-top: 10px;}
+    100% {opacity: 0;
+        margin-top: 20px;}
+}
+
+@-webkit-keyframes eyeDead {
+    from {top: 3px;}
+    to {top: 0px;}
+}
