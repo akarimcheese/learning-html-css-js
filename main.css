@@ -8,11 +8,13 @@ h1 {
     left: 5em;
     font-family: sans-serif;
     color: white;
+    -webkit-animation: introTitle 2s forwards;
 }
 
 #aboveGround {
     width: 100%;
     height: 120px;
+    -webkit-animation: appear 2s forwards;
 }
 
 #person {
@@ -32,8 +34,6 @@ h1 {
 
 .heart {
     position: absolute;
-    height: 25px;
-    width: 25px;
     -webkit-transform: rotate(-20deg);
     -webkit-animation: heartAppear 1s forwards linear;
     -webkit-animation-play-state: paused;
@@ -41,7 +41,6 @@ h1 {
 
 .teardrop {
     position: absolute;
-    height: 25px;
     margin-left: 2px;
     -webkit-animation: sweatAppear 1s forwards linear;
     -webkit-animation-play-state: paused;
@@ -282,7 +281,7 @@ h1 {
 }
 
 #burgerDeploy {
-    margin-top: 50px;
+    margin-top: 10px;
     margin-left: 300px;
     width: 150px;
     height: 50px;
@@ -296,10 +295,20 @@ h1 {
     font-family: sans-serif;
     font-size: 19px;
     font-variant: small-caps;
+    -webkit-animation: appear 3s forwards;
 }
 
 #burgerDeploy:active {
     border-style: inset;
+}
+
+h2 {
+    position: absolute;
+    font-family: sans-serif;
+    margin-top: 75px;
+    margin-left: 3em;
+    padding-right: 2em;
+    -webkit-animation: introNarration 2s forwards;
 }
 
 @-webkit-keyframes moveDash {
@@ -365,4 +374,23 @@ h1 {
 @-webkit-keyframes eyeDead {
     from {top: 3px;}
     to {top: 0px;}
+}
+
+@-webkit-keyframes introTitle {
+    from {opacity: 0;
+        top: 40px;}
+    to {opactiy: 1;
+        top 50px; }
+}
+
+@-webkit-keyframes introNarration {
+    from {opacity: 0;
+        margin-top: 85px;}
+    to {opactiy: 1;
+        margin-top 75px; }
+}
+
+@-webkit-keyframes appear {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
