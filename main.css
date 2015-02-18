@@ -1,0 +1,216 @@
+body {
+    background-color: rgb(100, 180, 220);
+}
+
+#sidebar {
+    position: fixed;
+    width: 150px;
+    margin-left: -132px;
+    left: 0;
+    top: 0%;
+    background: rgb(230,100,100);
+    height: 100%;
+    border-right-style: solid;
+    border-right-width: -3em;
+    border-right-color: rgb(190, 60, 60);
+    transition: margin-left 1s;
+}
+
+#sidebar:hover {
+     margin-left: 0px;
+}
+
+.content {
+    height: 3em;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    -webkit-animation: sideBarPull 1s forwards;
+    animation: sideBarPull 1s forwards;
+}
+
+.content:hover {
+    -webkit-animation: sideBarPush 1s forwards;
+    animation: sideBarPush 1s forwards;
+}
+
+.contText {
+    position: inherit;
+    margin: 0;
+    padding-left: 0.5em;
+    font-family: 'Monoton', cursive;
+    font-size: 1.2em;
+    color: rgb(230,230,100);
+}
+
+.link {
+    text-decoration: none;
+}
+
+.contText:hover {
+    -webkit-animation: neon 1.5s ease-in-out infinite alternate;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+#button1 {
+    background: rgb(100, 230, 230);
+    border-right-style: solid;
+    border-right-width: 7px;
+    border-right-color: rgb(60, 190, 190);
+}
+
+#button2 {
+    background: rgb(80, 210, 210);
+    border-right-style: solid;
+    border-right-width: 6px;
+    border-right-color: rgb(40, 170, 170);
+}
+
+#button3 {
+    background: rgb(60, 190, 190);
+    border-right-style: solid;
+    border-right-width: 5px;
+    border-right-color: rgb(20, 150, 150);
+}
+
+#button4 {
+    background: rgb(40, 170, 170);
+    border-right-style: solid;
+    border-right-width: 4px;
+    border-right-color: rgb(0, 130, 130);
+}
+
+#button5 {
+    background: rgb(20, 150, 150);
+    border-right-style: solid;
+    border-right-width: 3px;
+    border-right-color: rgb(0, 110, 110);
+}
+
+@-webkit-keyframes sideBarPush {
+    0% {border-right-width: 100%;}
+    100% {border-right-width: 0px;}
+}
+
+@keyframes sideBarPush {
+    0% {border-right-width: 100%;}
+    100% {border-right-width: 0px;}
+}
+
+@-webkit-keyframes sideBarPull {
+    0% {border-right-width: 0px;}
+    100% {border-right-width: 100%;}
+}
+
+@keyframes sideBarPull {
+    0% {border-right-width: 0px;}
+    100% {border-right-width: 100%;}
+}
+
+@-webkit-keyframes neon {
+  from {
+    text-shadow: 0 0 10px rgb(240, 200, 240),
+               0 0 20px  rgb(240, 200, 240),
+               0 0 30px  rgb(240, 240, 240),
+               0 0 40px  rgb(240, 240, 240);
+  }
+  to {
+    text-shadow: 0 0 5px rgb(240, 200, 240),
+               0 0 10px rgb(240, 200, 240),
+               0 0 15px rgb(240, 240, 240),
+               0 0 20px rgb(240, 240, 240);
+  }
+}
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 10px rgb(240, 200, 240),
+               0 0 20px  rgb(240, 200, 240),
+               0 0 30px  rgb(240, 240, 240),
+               0 0 40px  rgb(240, 240, 240);
+  }
+  to {
+    text-shadow: 0 0 5px rgb(240, 200, 240),
+               0 0 10px rgb(240, 200, 240),
+               0 0 15px rgb(240, 240, 240),
+               0 0 20px rgb(240, 240, 240);
+  }
+}
+
+h1 {
+    margin-top: 0px;
+    font-family: 'Audiowide', cursive;
+    text-align: center;
+    font-size: 100px;
+    color: rgb(210,210,80);
+}
+
+h5 {
+    margin-top: -90px;
+    font-family: 'Audiowide', cursive;
+    text-align: center;
+    font-size: 20px;
+    color: orange;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+#O {
+    color: black;
+}
+
+#V {
+    color: white;
+}
+
+#body {
+    background:rgb(90, 170, 210);
+    font-family: 'Audiowide', sans-serif;
+    text-align: center;
+    color: white;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+.bodyText {
+    text-align: left;
+    color: black;
+    font-size: 15px;
+    padding-left: 10em;
+    padding-right: 10em;
+}
+
+table {
+    margin: auto;
+}
+
+table, th, td {
+    border: 5px solid orange;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
+table tr:nth-child(even) {
+    color: white;
+}
+table tr:nth-child(odd) {
+   color: black;
+}
+
+th	{
+    background-color: orange;
+    color: black;
+}
+
+#footerText {
+    padding-top: 5em;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 10px;
+    color: black;
+}
