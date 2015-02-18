@@ -11,10 +11,10 @@
             <div id="person">
                 <p id="burgerCounter">0</p>
                 <div>
-                    <img class="heart" id="heart" src="https://cloud.githubusercontent.com/assets/10968101/6239959/47d192a8-b6d7-11e4-9dab-2e4c9795a9dd.png">
+                    <img class="heart" id="heart" src="heart.png">
                 </div>
                 <div>
-                    <img class="teardrop" id="teardrop" src="https://cloud.githubusercontent.com/assets/10968101/6239960/47d3d1f8-b6d7-11e4-8dea-271b2623f6c4.png">
+                    <img class="teardrop" id="teardrop" src="teardrop.png">
                 </div>
                 <div id="head">
                     <div class="eye" id="eye1">
@@ -55,6 +55,7 @@
             </div>
         </div>
         <div id="ground">
+            <h2 id="narration">Go ahead... give our hungry friend here a burger.</h2>
             <button id="burgerDeploy" onclick="burgerAnimation()">Deploy Burger</button>
         </div>
         
@@ -67,6 +68,12 @@
             var mouthMargin = 15;
             
             function burgerAnimation() {
+                var narration = document.getElementById('narration');
+                if (burgerCount == 0) {
+                    var goodbye = document.getElementById('TitleText');
+                    goodbye.parentNode.removeChild(goodbye);
+                    narration.innerHTML = "Now let's see how he likes it.";
+                }
                 var elm = document.getElementById('burger');
                 var newone = elm.cloneNode(true);
                 elm.id = "toBeDeleted";
@@ -76,34 +83,60 @@
                 var tempCount = burgerCount;
                 setTimeout(function() {elm.parentNode.removeChild(elm); 
                                       document.getElementById('burgerCounter').innerHTML = tempCount;
-                                        if (tempCount < 4) {
-                                        heartAnimation();
-                                        } else if (tempCount < 8) {
-                                        sweatAnimation();
-                                        } else if (tempCount < 10) {
-                                        deathAnimation();}}, 5000);
+                                        switch(tempCount) {
+                                                case 1:
+                                                    heartAnimation(35);
+                                                    narration.innerHTML = "He loves it! Give him another one.";
+                                                    break;
+                                                case 2:
+                                                    heartAnimation(25);
+                                                    narration.innerHTML = "Not as good as the first one, but still tasty! Another!";
+                                                    break;
+                                                case 3:
+                                                    heartAnimation(10);
+                                                    narration.innerHTML = "It's the same tasty burger, just... less satisfying. See if the next one is any better.";
+                                                    break;
+                                                case 4:
+                                                    sweatAnimation(10);
+                                                    narration.innerHTML = "Oh, looks like he was full! Let's see what happens with another burger!"
+                                                    break;
+                                                case 5:
+                                                    sweatAnimation(20);
+                                                    narration.innerHTML = "Maybe this is a little unhealthy... Another!"
+                                                    break;
+                                                case 6:
+                                                    sweatAnimation(35);
+                                                    narration.innerHTML = "Look at his stomach! Let's do it again!"
+                                                    break;
+                                                default:
+                                                    deathAnimation();
+                                                    break;
+                                        }}, 5000);
             }
             
-            function heartAnimation() {
+            function heartAnimation(size) {
                 var elm = document.getElementById('heart');
                 var newone = elm.cloneNode(true);
                 elm.id = "toBeDeleted";
                 elm.parentNode.appendChild(newone);
+                elm.style.height = size + "px";
                 elm.style.webkitAnimationPlayState = 'running';
                 setTimeout(function() {elm.parentNode.removeChild(elm);}, 2000);
             }
             
-            function sweatAnimation() {
+            function sweatAnimation(size) {
                 biggerBelly();
                 var elm = document.getElementById('teardrop');
                 var newone = elm.cloneNode(true);
                 elm.id = "toBeDeleted";
                 elm.parentNode.appendChild(newone);
+                elm.style.height = size + "px";
                 elm.style.webkitAnimationPlayState = 'running';
                 setTimeout(function() {elm.parentNode.removeChild(elm);}, 2000);
             }
             
             function deathAnimation() {
+                biggerBelly();
                 eyeHeight--;
                 mouthMargin += 2;
                 document.getElementById('eye1').style.height = eyeHeight + "px";
