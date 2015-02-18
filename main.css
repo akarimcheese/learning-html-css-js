@@ -8,11 +8,11 @@ body {
     margin-left: -132px;
     left: 0;
     top: 0%;
-    background: rgb(230,100,100);
+    background: orange;
     height: 100%;
     border-right-style: solid;
     border-right-width: -3em;
-    border-right-color: rgb(190, 60, 60);
+    border-right-color: darkorange;
     transition: margin-left 1s;
 }
 
