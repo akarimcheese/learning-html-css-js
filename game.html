@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<style>
+		
+			svg {
+				display: block;
+				margin: auto;
+			}
+			
+			#narrative {
+				font-family: Sans-serif;
+  	  			color: #333;
+			 	font-size: 28px;
+				text-align: center;
+				background: #EEE;
+				padding: 2em 0;
+				border-top: thick dashed brown;
+				box-shadow: 0 -5px 0 green;
+			}
+			
+			#stats {
+				font-family: Sans-serif;
+  	  			color: #333;
+			 	font-size: 10px;
+				text-align: right;
+				background: tan;
+				padding: 2em 0;
+			}
+			
+			.keyword {
+				text-decoration: none;
+  				display: inline-block;
+  				color: goldenrod;
+  				font-weight: bold;
+  				border-bottom: 1px solid black;
+			}
+			
+			#rainbow {
+  				-webkit-animation: rainbow;
+  				animation: rainbow;
+  				-webkit-animation-duration: 3s;
+  				-webkit-animation-iteration-count: infinite;
+			}
+			
+			
+			
+			button {
+  				height: 20px;
+  				border-radius: 3px;
+  				text-align: center;
+  				font-family: Sans-serif;
+  				font-size: 10px;
+  				font-weight: bold;
+  				letter-spacing: 3px;
+  				cursor: pointer;
+  				color: black;
+			}
+			
+			@-webkit-keyframes rainbow {
+    			0% {color: red;}
+    			33%{color: blue;}
+    			66%{color: green;}
+    			100%{color: red;}
+    		}
+            
+            #block {
+                position: absolute;
+                left: -8px;
+                top: 158px;
+                width: 5px;
+                height: 5px;
+                background: tan;
+                -webkit-animation-name: teacherEnter;
+                -webkit-animation-duration: 5s;
+                -webkit-animation-timing-function: linear;
+                -webkit-animation-play-state: paused; 
+            }
+            
+            @-webkit-keyframes teacherEnter {
+                0%   {left:-1vw;}
+                100% {left:53vw;}
+            }
+            
+            #blockling {
+                position: absolute;
+                right: -8px;
+                top: 158px;
+                width: 5px;
+                height: 5px;
+                background: brown;
+                -webkit-animation-name: studentEnter;
+                -webkit-animation-duration: 5s;
+                -webkit-animation-timing-function: linear;
+                -webkit-animation-play-state: paused; 
+            }
+            
+            @-webkit-keyframes studentEnter {
+                0%   {right:-1vw;}
+                100% {right:46vw;}
+            }
+		</style>
+	</head>
+	
+	<body>
+		<!-- SVG INCOMING 54 == 14 -->
+		<svg id="school" height="160" width="500">
+		
+			<!--Outline of school-->
+  			<polygon id="outline" points="100,160 400,160 400,85 350,85 300,50 250,85 225,85 225,60 125,35 125,60 100,60" style="fill:white;stroke:grey;stroke-width:5;fill-rule:nonzero;"/>
+  			
+  			<!--Midlevel-->
+  			<polygon id="midlevel" points="350,103 300,118 250,103" style="fill:white;stroke:grey;stroke-width:3;fill-rule:nonzero;"/>
+  			
+  			<!--Flagpole-->
+  			<polygon points="200,163 210,163 210,10 200,10" style="fill:gray;stroke:white;stroke-width:3;fill-rule:nonzero;"/>
+  			
+  			<!--Pillars-->
+  			<polygon id="pillar1" points="280,160 270,160 270,110 280,113" style="fill:white;stroke:gray;stroke-width:3;fill-rule:nonzero;"/>
+  			<polygon id="pillar2" points="320,160 330,160 330,110 320,113" style="fill:white;stroke:gray;stroke-width:3;fill-rule:nonzero;"/>
+  			
+  			<!--Door-->
+  			<polygon points="290,160 310,160 310,140 290, 140" style="fill:gray;stroke:gray;stroke-width:3;fill-rule:nonzero;"/>
+  			
+  			<!-- White and Red stripes of flag -->
+  			<line x1="199" y1="14" x2="148" y2="14" style="stroke:red;stroke-width:3" />
+  			<line x1="199" y1="21" x2="148" y2="21" style="stroke:red;stroke-width:3" />
+  			<line x1="199" y1="28" x2="148" y2="28" style="stroke:red;stroke-width:3" />
+  			<line x1="199" y1="32" x2="148" y2="32" style="stroke:white;stroke-width:3" />
+  			<line x1="199" y1="35" x2="148" y2="35" style="stroke:red;stroke-width:3" />
+  			
+  			<!-- Blue part of flag -->
+  			<rect x="174" y="12" width="25" height="14" style="fill:blue;" />
+  			
+  			<!-- Stars for flag -->
+  			<circle cx="178" cy="14" r="1" fill="white" />
+  			<circle cx="181" cy="14" r="1" fill="white" />
+  			<circle cx="184" cy="14" r="1" fill="white" />
+  			<circle cx="187" cy="14" r="1" fill="white" />
+ 			<circle cx="190" cy="14" r="1" fill="white" />
+  			<circle cx="193" cy="14" r="1" fill="white" />
+  			<circle cx="196" cy="14" r="1" fill="white" />
+  			<circle cx="178" cy="17" r="1" fill="white" />
+ 			<circle cx="181" cy="17" r="1" fill="white" />
+ 			<circle cx="184" cy="17" r="1" fill="white" />
+  			<circle cx="187" cy="17" r="1" fill="white" />
+  			<circle cx="190" cy="17" r="1" fill="white" />
+  			<circle cx="193" cy="17" r="1" fill="white" />
+  			<circle cx="196" cy="17" r="1" fill="white" />
+ 			<circle cx="178" cy="20" r="1" fill="white" />
+  			<circle cx="181" cy="20" r="1" fill="white" />
+ 			<circle cx="184" cy="20" r="1" fill="white" />
+  			<circle cx="187" cy="20" r="1" fill="white" />
+ 			<circle cx="190" cy="20" r="1" fill="white" />
+ 			<circle cx="193" cy="20" r="1" fill="white" />
+  			<circle cx="196" cy="20" r="1" fill="white" />
+  			<circle cx="178" cy="23" r="1" fill="white" />
+  			<circle cx="181" cy="23" r="1" fill="white" />
+ 			<circle cx="184" cy="23" r="1" fill="white" />
+  			<circle cx="187" cy="23" r="1" fill="white" />
+ 			<circle cx="190" cy="23" r="1" fill="white" />
+ 			<circle cx="193" cy="23" r="1" fill="white" />
+  			<circle cx="196" cy="23" r="1" fill="white" />
+  			Sorry, your browser does not support inline SVG.
+		</svg>	
+        <div id="block"></div>
+        <div id="blockling"></div>
+		
+		
+		<div id="narrative">
+			<p>Name your <a class="keyword">school</a></p>
+			<p id="step1">
+				<input type="text" id="sName"> 
+				<button id="b1" type="button" onclick="sNameChose()">High School</button>
+			</p>
+		</div>
+		<div id="stats">
+			<p id='teacherCount'>0 teachers</p>
+			<p id='studentCount'>0 students</p>
+		</div>
+		
+		<script>
+			var sName;
+			var sColor;
+			var budget = 0;
+			var teachersDiscovered = false;
+			var teacherCost = 5;
+			var teachers = 0;
+			var teacherMood = 50;
+			var students = 0;
+			var studentMood = 50;
+            var studentArray = [];    
+            //var debateCost = 30;
+            //var debateDiscovered = false;
+            //var debateMembers = 0;
+            //var debateArray = [];
+            //var debatePresent = false;
+		
+			function sNameChose() {
+				//Getting Input Value
+				sName = document.getElementById('sName').value;
+				//Getting SVG Object
+				var svg = document.getElementById('school');
+				// Creating an SVG Text objects
+				var namePlate = document.createElementNS("http://www.w3.org/2000/svg", 
+				"text");
+				var namePlate2 = document.createElementNS("http://www.w3.org/2000/svg", 
+				"text");
+				// Creating text nodes for the high school name
+				var textNode = document.createTextNode(sName);
+				var textNode2 = document.createTextNode("High School");
+				
+				// Placing and styling the name
+				namePlate.setAttribute("y", "75");
+				namePlate2.setAttribute("y", "85");
+				namePlate.setAttribute("x", "105");
+				namePlate2.setAttribute("x", "105");
+				namePlate.style.fontFamily = "Copperplate";
+				namePlate2.style.fontFamily = "Copperplate";
+				namePlate.style.fontSize = "12px";
+				namePlate2.style.fontSize = "12px";
+				namePlate.style.stroke = "white";
+				namePlate2.style.stroke = "white";
+				namePlate.style.strokeWidth = "0.5";
+				namePlate2.style.strokeWidth = "0.5";
+				namePlate.appendChild(textNode);
+				namePlate2.appendChild(textNode2);
+				
+				svg.appendChild(namePlate);
+				svg.appendChild(namePlate2);
+				
+				document.getElementById('step1').remove();
+				document.getElementById('narrative').innerHTML = 
+				"<p>Choose your <a class='keyword' id='rainbow'>color</a></p> <p id='step2'><input type='color' id='sColor'><button id='b2' type='button' onclick='sColorChose()'>Okay</button></p>";
+			}
+			
+			function sColorChose() {
+				//Getting Input Value
+				sColor= document.getElementById('sColor').value;
+				//Getting SVG Object
+				var svg = document.getElementById('school');
+				//Changing the color of the school
+				svg.getElementById('pillar1').style.fill = sColor;
+				svg.getElementById('pillar2').style.fill = sColor;
+				svg.getElementById('midlevel').style.fill = sColor;
+				
+				// Changing the narrative input
+				document.getElementById('step2').remove();
+				document.getElementById('narrative').innerHTML = 
+				"<p>You currently have <a class='keyword' id='counter'>0</a> tax dollars for your school</p>";
+				
+				// Starting the tax dollar counter
+				var counter = document.getElementById('counter');
+				setInterval(function() {
+					budget++;
+					counter.innerHTML = budget;
+						if (budget == teacherCost && teachersDiscovered == false) {
+							discoverTeachers();
+							counter = document.getElementById('counter');
+						}
+                    /*
+                        if (budget == debateCost && debateDiscovered == false && teachers > 1) {
+                            discoverDebate();
+                        }
+                    */
+				}, 1000);
+			}
+			
+            function paySalaries() {
+                setInterval(function() {
+                    for (var count = 0; count < teachers; count++) {
+					   budget--;
+                    }
+					counter.innerHTML = budget;
+				}, 5000);
+            }
+            
+			function discoverTeachers() {
+				teachersDiscovered = true;
+			
+				var current = document.getElementById('narrative').innerHTML;
+				
+				document.getElementById('narrative').innerHTML = current + "<p><button id='b3' type='button' onClick='buyTeacher()'>Hire Teacher($" + teacherCost + ")</button></p>";
+			}
+            
+            /*
+            function discoverDebate() {
+            debateDiscovered = true;
+            
+            var current = document.getElementById('narrative').innerHTML;
+            
+            document.getElementById('narrative').innerHTML = current + "<p><button id='b4' type='button' onClick='startDebate()'>Start a debate team($" + debateCost + ")</button></p>";
+            
+            }
+            */
+			
+			function buyTeacher() {
+				if (budget >= teacherCost) {
+					budget -= teacherCost;
+					document.getElementById('counter').innerHTML = budget;
+					teachers++;
+                    
+                    if (teachers == 1) {
+					   document.getElementById('teacherCount').innerHTML = teachers + " teacher";
+                       //  paySalaries();
+				    }
+				    else {
+					   document.getElementById('teacherCount').innerHTML = teachers + " teachers";
+				    }
+                    
+                    var elm = document.getElementById('block');
+                    var newone = elm.cloneNode(true);
+                    elm.parentNode.appendChild(newone);
+                    newone.style.WebkitAnimationPlayState = 'initial';
+					fillClass();
+                    setTimeout(newone.parentNode.removeChild(), 5000);
+				}
+			}
+            
+            /*
+            function buyDebate() {
+                if (budget >= debateCost) {
+                    budget -= debateCost;
+                    document.getElementById('counter').innerHTML = budget;
+                    debatePresent = true;
+                    var elm = document.getElementById('narrative');
+                    elm.parentNode.removeChild(elm);
+                }
+            }
+            */
+			
+		function fillClass() {
+				var secStudents = 0;
+				var studentAdder = setInterval(function() {
+					secStudents++;
+					students++;
+                    var student = {firstName:"John", 
+                                   lastName:"Doe", 
+                                   grade:9};
+                    studentArray.push(student);
+					document.getElementById('studentCount').innerHTML = students + " students";
+                    var elm = document.getElementById('blockling');
+                    var newone = elm.cloneNode(true);
+                    newone.style.WebkitAnimationPlayState = 'initial';
+                    elm.parentNode.appendChild(newone);
+					if(secStudents == 20) {
+						clearInterval(studentAdder);
+					}
+				}, 1000);
+			}
+		</script>
+		
+	</body>
+	
+</html>
