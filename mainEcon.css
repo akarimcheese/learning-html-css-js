@@ -5,7 +5,7 @@ body {
 h1 {
     position: absolute;
     top: 50px;
-    left: 5em;
+    left: 1em;
     font-family: sans-serif;
     color: white;
     -webkit-animation: introTitle 2s forwards;
@@ -15,6 +15,7 @@ h1 {
     width: 100%;
     height: 120px;
     -webkit-animation: appear 2s forwards;
+    -webkit-transition: margin-top 1s;
 }
 
 #person {
@@ -45,6 +46,7 @@ h1 {
     -webkit-animation: sweatAppear 1s forwards linear;
     -webkit-animation-play-state: paused;
 }
+
 #head {
     height: 60px;
     width: 80px;
@@ -117,9 +119,9 @@ h1 {
     width: 30px;
     border-radius: 5px;
     background-color: red;
-    transition: width 1s;
-    transition: margin-left 1s;
-    transition: border-radius 1s;
+    -webkit-transition: width 1s;
+    -webkit-transition: margin-left 1s;
+    -webkit-transition: border-radius 1s;
 }
 
 .leg {
@@ -143,29 +145,28 @@ h1 {
 
 #conveyorBeltContainer {
     overflow: hidden;
-    position: absolute;
-    width: 450px;
+    position: relative;
+    width: 240px;
     border-radius: 10px;
+    margin-top: -100px;
     margin-left: 140px;
-    top: 200px;
     height: 10px;
 }
 
 #belt1 {
-    position: absolute;
+    position: relative;
     width: 510px;
     margin-left: -54px;
     border-style: dashed;
-    
     border-radius: 10px;
     -webkit-animation: moveDash 2.5s infinite linear;
 }
 
 #wheelContainer {
-    position: absolute;
+    position: relative;
     height: 67px;
     width: 25px;
-    top: 200px;
+    margin-top: -10px;
     margin-left: 115px;
     overflow: hidden;
 }
@@ -182,11 +183,11 @@ h1 {
 
 #conveyorBeltContainer2 {
     overflow: hidden;
-    position: absolute;
-    width: 450px;
+    position: relative;
+    width: 240px;
     border-radius: 10px;
     margin-left: 140px;
-    top: 254px;
+    margin-top: -13px;
     height: 10px;
 }
 
@@ -200,11 +201,11 @@ h1 {
 }
 
 #wheelContainer2 {
-    position: absolute;
+    position: relative;
     height: 67px;
     width: 25px;
-    top: 200px;
-    margin-left: 590px;
+    margin-top: -64px;
+    margin-left: 380px;
     overflow: hidden;
 }
 
@@ -234,7 +235,7 @@ h1 {
     height: 30px;
     width: 40px;
     -webkit-transform: rotate(-30deg);
-    -webkit-animation: burgerProcess 5s forwards linear;
+    -webkit-animation: burgerProcess 2s forwards linear;
     -webkit-animation-play-state: paused;
 }
 
@@ -270,14 +271,58 @@ h1 {
 }
 
 #bunBottom {
-     height: 10px;
+    height: 10px;
     background-color: tan;
+}
+
+#happyMeter {
+    position: relative;
+    margin-left: 10px;
+    margin-top: -100px;
+    height: 110px;
+    width: 20px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: white;
+}
+
+#happyBar {
+    position: relative;
+    margin-top: 50px;
+    height: 10px;
+    background-color: red;
+    -webkit-transition: margin-top 1s ease-in;
+    
 }
 
 #ground {
     width: 100%;
     height: 300px; 
     background-color: rgb(80, 130, 180);
+}
+
+#outOfOrder {
+    margin-top: -50px;
+    margin-left: 320px;
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 19px;
+    font-variant: small-caps;
+    color: white;
+    border-style: solid;
+    -webkit-transform: rotate(30deg);
+    -webkit-animation: appear 1s forwards linear;
+    -webkit-animation-play-state: paused;
+    pointer-events: none;
+    -webkit-transition: margin-left 1s;
+}
+
+#signText {
+    position: relative;
+    top: -10px;
 }
 
 #burgerDeploy {
@@ -296,6 +341,7 @@ h1 {
     font-size: 19px;
     font-variant: small-caps;
     -webkit-animation: appear 3s forwards;
+    -webkit-transition: margin-left 1s;
 }
 
 #burgerDeploy:active {
@@ -305,9 +351,9 @@ h1 {
 h2 {
     position: absolute;
     font-family: sans-serif;
-    margin-top: 75px;
-    margin-left: 3em;
-    padding-right: 2em;
+    margin-top: 85px;
+    margin-left: 1em;
+    padding-right: 3em;
     -webkit-animation: introNarration 2s forwards;
 }
 
@@ -323,27 +369,27 @@ h2 {
 
 @-webkit-keyframes burgerProcess {
     0%  { top: -40px;
-            left: 500px;}
-    10% { top: 165px;
+            left: 300px;}
+    20% { top: 165px;
          -webkit-transform: rotate(-30deg);
-        left: 500px;}
-    12% {-webkit-transform: rotate(45deg); }
-    14% { top: 130px;
-        left: 480px;
+        left: 300px;}
+    25% {-webkit-transform: rotate(45deg); }
+    30% { top: 130px;
+        left: 280px;
         -webkit-transform: rotate(100deg); }
-    16% {-webkit-transform: rotate(140deg); }
-    19% { top: 166px;
-        left: 460px; 
+    35% {-webkit-transform: rotate(140deg); }
+    40% { top: 166px;
+        left: 260px; 
         -webkit-transform: rotate(170deg); }
-    21% { top: 166px;
-        left: 450px;
+    45% { top: 166px;
+        left: 250px;
         -webkit-transform: rotate(190deg); }
-    25% { top: 168px;
+    50% { top: 168px;
         -webkit-transform: rotate(180deg);}
-    90% { left: 120px;
+    80% { left: 120px;
             top: 168px;
             -webkit-transform: rotate(180deg);}
-    95% { top: 180px; 
+    90% { top: 180px; 
             -webkit-transform: rotate(140deg);}
     100% { left: 50px;
             top: 260px;
@@ -385,9 +431,9 @@ h2 {
 
 @-webkit-keyframes introNarration {
     from {opacity: 0;
-        margin-top: 85px;}
+        margin-top: 95px;}
     to {opactiy: 1;
-        margin-top 75px; }
+        margin-top 85px; }
 }
 
 @-webkit-keyframes appear {
