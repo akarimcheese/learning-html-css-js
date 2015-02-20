@@ -57,154 +57,62 @@
                 <div id="happyBar"></div>
             </div>
         </div>
+        <div id="tsperson">
+                <div id="tshead">
+                    <div class="eye" id="tseye1">
+                        <div class="pupil" id="pupil1"></div>
+                    </div> 
+                    <div class="eye" id="tseye2">
+                        <div class="pupil" id="pupil2"></div>
+                    </div>
+                    <div id="tsmouth"></div>
+                </div>
+                <div class="arm" id="tsl_arm"></div>
+                <div id="tstorso"></div>
+                <div class="arm" id="tsr_arm"></div>
+                <div class="leg" id="tsl_leg"></div>
+                <div class="leg" id="tsr_leg"></div>
+        </div>
+        <div id="tanningSalon">
+            <div id="wall1"></div>
+            <div id="wall2"></div>
+            <div id="wall3"></div>
+            <div id="wall4"></div>
+            <h3 id="banner">Tanning Salon</h3>
+            <div id="window"></div>
+            <div id="utilGraph1">
+                <p id="graphTitle">Overall Satisfaction</p>
+                <div id="yAxis">
+                    <div class="yTick" id="ytick1"></div>
+                    <div class="yTick" id="ytick2"></div>
+                    <div class="yTick" id="ytick3"></div>
+                    <div class="yTick" id="ytick4"></div>
+                </div>
+                <div id="xAxis">
+                    <div class="xTick" id="xtick1"></div>
+                    <div class="xTick" id="xtick2"></div>
+                    <div class="xTick" id="xtick3"></div>
+                    <div class="xTick" id="xtick4"></div>
+                </div>
+                <p id="xTitle">Visits</p>
+                <p id="yTitle">Total Utility</p>
+                <div id="line1Container">
+                    <div id="line1"></div>
+                </div>
+                <div id="line2Container">
+                    <div id="line2"></div>
+                </div>
+                <div class="point" id="point1"></div>
+                <div class="point" id="point2"></div>
+                <div class="point" id="point3"></div>
+                <div class="point" id="point4"></div>
+            </div>
+        </div>
         <div id="ground">
             <h2 id="narration">Go ahead... give our hungry friend here a burger.</h2>
             <button id="burgerDeploy" onclick="burgerAnimation()">Deploy Burger</button>
              <div id="outOfOrder"><p id="signText">Out of Order</p></div>
         </div>
-        
-        <script>
-            var burgerCount = 0;
-            var width = 30;
-            var roundness = 5;
-            var marginLeft = 25;
-            var eyeHeight = 10;
-            var mouthMargin = 15;
-            
-            function burgerAnimation() {
-                var narration = document.getElementById('narration');
-                if (burgerCount == 0) {
-                    var goodbye = document.getElementById('TitleText');
-                    goodbye.parentNode.removeChild(goodbye);
-                    narration.innerHTML = "Now let's see how he likes it.";
-                }
-                var elm = document.getElementById('burger');
-                var newone = elm.cloneNode(true);
-                elm.id = "toBeDeleted";
-                elm.parentNode.appendChild(newone);
-                elm.style.webkitAnimationPlayState = 'running';
-                burgerCount++;
-                var tempCount = burgerCount;
-                setTimeout(function() {elm.parentNode.removeChild(elm); 
-                                      document.getElementById('burgerCounter').innerHTML = tempCount;
-                                        switch(tempCount) {
-                                                case 1:
-                                                    heartAnimation(35);
-                                                    happyBar(15, 20);
-                                                    narration.innerHTML = "He loves it! Give him another one.";
-                                                    break;
-                                                case 2:
-                                                    heartAnimation(25);
-                                                    happyBar(5, 10);
-                                                    narration.innerHTML = "Not as good as the first one, but still tasty! Another!";
-                                                    break;
-                                                case 3:
-                                                    heartAnimation(10);
-                                                    happyBar(5, 10);
-                                                    narration.innerHTML = "It's the same tasty burger, just... less satisfying. See if the next one is any better.";
-                                                    break;
-                                                case 4:
-                                                    sweatAnimation(10);
-                                                    happyBar(20, 15);
-                                                    narration.innerHTML = "Oh, looks like he was full! Let's see what happens with another burger!"
-                                                    break;
-                                                case 5:
-                                                    sweatAnimation(20);
-                                                    happyBar(25, 20);
-                                                    narration.innerHTML = "Maybe this is a little unhealthy... Another!"
-                                                    break;
-                                                case 6:
-                                                    sweatAnimation(35);
-                                                    happyBar(45, 40);
-                                                    narration.innerHTML = "Look at his stomach! Let's do it again!"
-                                                    break;
-                                                 case 7:
-                                                    deathAnimation();
-                                                    happyBar(70, 65);
-                                                    narration.innerHTML = "That can't be good... again..?"
-                                                    break;
-                                                case 8:
-                                                    deathAnimation();
-                                                    happyBar(100, 100);
-                                                    narration.innerHTML = "Okay, okay, last one."
-                                                    break;
-                                                case 9:
-                                                    deathAnimation();
-                                                    happyBar(500, 800);
-                                                    narration.innerHTML = "Alright, we've tortured this guy enough. Let's go into utility."
-                                                    document.getElementById("burgerDeploy").onclick = "";
-                                                    document.getElementById("outOfOrder").style.webkitAnimationPlayState = "running";
-                                                    setTimeout(function() {utilityLesson()}, 3000);
-                                                    break;
-                                                default:
-                                                    break;
-                                        }}, 2000);
-            }
-            
-            function happyBar(level, result) {
-                var elm = document.getElementById('happyBar');
-                elm.style.marginTop = level + "px";
-                setTimeout( function() {elm.style.marginTop = result + "px";}, 1000);
-            }
-            
-            function heartAnimation(size) {
-                var elm = document.getElementById('heart');
-                var newone = elm.cloneNode(true);
-                elm.id = "toBeDeleted";
-                elm.parentNode.appendChild(newone);
-                elm.style.height = size + "px";
-                elm.style.webkitAnimationPlayState = 'running';
-                setTimeout(function() {elm.parentNode.removeChild(elm);}, 2000);
-            }
-            
-            function sweatAnimation(size) {
-                biggerBelly();
-                var elm = document.getElementById('teardrop');
-                var newone = elm.cloneNode(true);
-                elm.id = "toBeDeleted";
-                elm.parentNode.appendChild(newone);
-                elm.style.height = size + "px";
-                elm.style.webkitAnimationPlayState = 'running';
-                setTimeout(function() {elm.parentNode.removeChild(elm);}, 2000);
-            }
-            
-            function deathAnimation() {
-                biggerBelly();
-                eyeHeight--;
-                mouthMargin += 2;
-                document.getElementById('eye1').style.height = eyeHeight + "px";
-                document.getElementById('eye2').style.height = eyeHeight + "px";
-                document.getElementById('pupil1').style.webkitAnimationPlayState = 'running';
-                document.getElementById('pupil2').style.webkitAnimationPlayState = 'running';
-                document.getElementById('mouth').style.marginTop = mouthMargin + "px";
-            }
-            
-            function biggerBelly() {
-                width += 4;
-                marginLeft -= 2;
-                roundness += 2;
-                var elm = document.getElementById('torso');
-                elm.style.width = width + "px"
-                elm.style.marginLeft = marginLeft + "px";
-                elm.style.borderRadius = roundness + "px";
-            }
-            
-            function utilityLesson() {
-                var elm = document.getElementById('aboveGround');
-                elm.style.marginTop = -300 + "px";
-                setTimeout(function() { elm.style.height = 292 + "px";
-                                        while (elm.firstChild) {
-                                            elm.removeChild(elm.firstChild); 
-                                        elm.style.marginTop = 0 + "px";}}, 1000);
-                
-                var elm2 = document.getElementById('burgerDeploy');
-                elm2.style.marginLeft = -500 + "px";
-                setTimeout(function() {elm2.parentNode.removeChild(elm2);}, 1000);
-                
-                var elm3 = document.getElementById('outOfOrder');
-                elm3.style.marginLeft = -500 + "px";
-                setTimeout(function() {elm3.parentNode.removeChild(elm3);}, 1000);
-            }
-        </script>
+        <script src="utility.js"></script>
     </body>
 </html>
