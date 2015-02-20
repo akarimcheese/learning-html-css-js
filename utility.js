@@ -172,76 +172,84 @@ function nextSlide(button) {
             button.innerHTML = "By How Much?";
             break;
         case 3:
-            narration.innerHTML = "Doesn't matter. Utility is an ordinal concept, which meaning the only thing that matters is whether utility is more or less.";
-            button.innerHTML = "So...";
+            narration.innerHTML = "Depends on how much it satisfied me. Like I said, utility is arbitrary, so I can make up numbers to measure my utility as long as what I prefer has a higher marginal utility than what I don't.";
+            button.innerHTML = "Marginal?";
             break;
         case 4:
-            narration.innerHTML = "So if a burger gives you 10 utility, and pizza gives you 15 utility, you'd prefer a pizza over a burger because it gives you more utility than a burger.";
-            button.innerHTML = "Tell Me More";
+            narration.innerHTML = "Marginal utility means the change in a consumer's utility for each unit of good they consume. Goods can't have utility. Pizzas cannot be satisfied.";
+            button.innerHTML = "Go on...";
             break;
         case 5:
+            narration.innerHTML = "Assuming I have two separate stomachs for burgers and cake (both equally empty), if I prefer eating a single burger over a single slice of cake, then the burger raises my utility by 15 and the slice of cake raises my utility by 10";
+            button.innerHTML = "I prefer dessert";
+            break;
+        case 6:
+            narration.innerHTML = "Different people have different utilities.";
+            button.innerHTML = "Touché";
+            break;
+        case 7:
             narration.innerHTML = "The more you consume a single good, the less utility you receive from it, just like we saw with our burger-eating friend.";
             button.innerHTML = "Another Example?";
             break;
-        case 6:
-            narration.innerHTML = "";
-            button.innerHTML = "Another Example?";
+        case 8:
+            narration.innerHTML = "Our gal pal here really wants a tan, so let's satisfy her want! Let's assume her utility is 0";
+            button.innerHTML = "Go Tan!";
             tannerMove(100);
             document.getElementById("tanningSalon").style.top = "0px";
             document.getElementById("point1").style.opacity = "1";
             break;
-        case 7:
-            narration.innerHTML = "";
-            button.innerHTML = "Another Example?";
+        case 9:
+            narration.innerHTML = "Look at her smile!";
+            button.innerHTML = "Explanation";
             tannerMove(450);
             setTimeout(function() {getTan();
                                   tannerSmile(12);}, 1000);
             break;
-        case 8:
-            narration.innerHTML = "";
-            button.innerHTML = "Another Example?";
+        case 10:
+            narration.innerHTML = "Because our friend is satisfied, we're going to say the marginal utility of one tanning session is 10";
+            button.innerHTML = "Again!";
             tannerMove(100);
             document.getElementById("line1Container").style.width = "54px";
             document.getElementById("point2").style.opacity = "1";
             break;
-        case 9:
-            narration.innerHTML = "";
-            button.innerHTML = "Another Example?";
+        case 11:
+            narration.innerHTML = "Looking even better!";
+            button.innerHTML = "Explanation";
             tannerMove(450);
             setTimeout(function() {getTan();
                                   tannerSmile(20);}, 1000);
             break;
-        case 10:
-            narration.innerHTML = "";
-            button.innerHTML = "Another Example?";
+        case 12:
+            narration.innerHTML = "Our friend is even happier! However, that's not to say that she enjoyed the second trip better than the first. She is just happier overall. Let's say the marginal utility of the second session is 5";
+            button.innerHTML = "Again!";
             tannerMove(100);
             document.getElementById("line1Container").style.width = "79px";
             document.getElementById("point3").style.opacity = "1";
             break;
-        case 11:
-            narration.innerHTML = "";
-            button.innerHTML = "Another Example?";
+        case 13:
+            narration.innerHTML = "A little too crisp..";
+            button.innerHTML = "Explanation";
             tannerMove(450);
             setTimeout(function() {getTan();
                                   tannerSmile(10);}, 1000);
             break;
-        case 12:
-            narration.innerHTML = "";
-            button.innerHTML = "Another Example?";
+        case 14:
+            narration.innerHTML = "Looks like our friend's skin is getting a little to dark for comfort. Though she feels it looks better than how she looked before her first trip, her margial utility was only -13. That means her total utility is more than what she started with.";
+            button.innerHTML = "Again?";
             tannerMove(100);
             document.getElementById("line2Container").style.width = "26px";
             document.getElementById("point4").style.opacity = "1";
             break;
-        case 13:
-            narration.innerHTML = "";
-            button.innerHTML = "Another Example?";
+        case 15:
+            narration.innerHTML = "That can't be healthy.";
+            button.innerHTML = "Explanation";
             tannerMove(450);
             setTimeout(function() {getTan();
                                   tannerSmile(0);}, 1000);
             break;
-        case 14:
-            narration.innerHTML = "";
-            button.innerHTML = "Another Example?";
+        case 16:
+            narration.innerHTML = "Our friend has serious skin damage and she is not happy. The marginal utility of the last visit was -30 and her total utility is negative.";
+            button.innerHTML = "Under Construction";
             tannerMove(100);
             document.getElementById("line2Container").style.width = "51px";
             break;
