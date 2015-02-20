@@ -303,7 +303,7 @@ h1 {
 
 #outOfOrder {
     margin-top: -50px;
-    margin-left: 320px;
+    margin-left: 165px;
     width: 100px;
     height: 50px;
     background-color: red;
@@ -325,9 +325,9 @@ h1 {
     top: -10px;
 }
 
-#burgerDeploy {
+button {
     margin-top: 10px;
-    margin-left: 300px;
+    margin-left: 150px;
     width: 150px;
     height: 50px;
     border-radius: 10px;
@@ -344,17 +344,333 @@ h1 {
     -webkit-transition: margin-left 1s;
 }
 
-#burgerDeploy:active {
+button:active {
     border-style: inset;
 }
 
 h2 {
     position: absolute;
     font-family: sans-serif;
-    margin-top: 85px;
+    margin-top: 70px;
     margin-left: 1em;
     padding-right: 3em;
     -webkit-animation: introNarration 2s forwards;
+    -webkit-transform: margin-top 1s;
+}
+
+#next {
+    font-size: 18px
+}
+
+#tsperson {
+    position: absolute;
+    margin-top: 172px;
+    margin-left: -150px;
+    width: 80px;
+    height: 120px;
+    -webkit-transition: margin-left 1s;
+}
+
+#tshead {
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    background-color: tan;
+    -webkit-transition: background-color 1s;
+}
+
+#tseye1 {
+    position: relative;
+    margin-left: 34px;
+    top: 13px;
+    border-radius: 15px;
+}
+
+#tseye2 {
+    position: relative;
+    margin-left: 12px;
+    top: 3px;
+    border-radius: 15px;
+}
+
+#tsmouth {
+    width: 30px;
+    height: 30px;
+    margin-top: -10px;
+    margin-left: 15px;
+    border-bottom-style: solid;
+    border-width: 10px;
+    border-radius: 10px;
+    -webkit-transition: border-radius 1s;
+}
+
+#tsl_arm {
+    top: 5px;
+    left: 10px;
+    -webkit-transition: background-color 1s;
+}
+
+#tsr_arm {
+    margin-top: -35px;
+    left: 40px;
+    -webkit-transition: background-color 1s;
+}
+
+#tstorso {
+    margin-top: -30px;
+    margin-left: 15px;
+    height: 40px;
+    width: 30px;
+    border-radius: 5px;
+    background-color: rgb(100, 400, 100);
+    -webkit-transition: width 1s;
+    -webkit-transition: margin-left 1s;
+    -webkit-transition: border-radius 1s;
+}
+
+#tsl_leg {
+    position: relative;
+    top: 5px;
+    left: 18px;
+}
+
+#tsr_leg {
+    position: relative;
+    top: -15px;
+    left: 32px;
+}
+
+#tanningSalon {
+    position: absolute;
+    height: 300px;
+    width: 500px;
+    top: -300px;
+    left: 420px;
+    border-top-left-radius: 100px;
+    overflow: hidden;
+    -webkit-transition: top 1s;
+}
+
+#banner {
+    width: 300px;
+    height: 50px;
+    font-family: sans-serif;
+    font-size: 40px;
+    margin-top: -240px;
+    margin-left: 50px;
+    padding-top: 10px;
+    text-align: center;
+    background-color: white;
+}
+
+#window {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+    background-color: lightblue;
+    opacity: 0.6;
+}
+
+#wall1 {
+    margin-top: 0px;
+    height: 160px;
+    background-color: gold;
+}
+
+#wall2 {
+    width: 50px;
+    height: 140px;
+    background-color: gold;
+}
+
+#wall3 {
+    margin-top:-40px;
+    height: 40px;
+    background-color: gold;
+}
+
+#wall4 {
+    margin-top: -140px;
+    margin-left: 150px;
+    width: 350px;
+    height: 140px;
+    background-color: gold;
+}
+
+#utilGraph1 {
+    margin-top: -120px;
+    margin-left: 170px;
+    height: 140px;
+    width: 150px;
+    background-color: white;
+    border-width: 2px;
+    border-style: solid;
+}
+
+#graphTitle {
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 4px;
+    padding-left: 15px;
+}
+
+#xAxis {
+    margin-top: 100px;
+    margin-left: 20px;
+    height: 3px;
+    width: 120px;
+    background-color: black;
+}
+
+.xTick {
+    position: absolute;
+    width: 3px;
+    height: 13px;
+    margin-top: -5px;
+    background-color: black;
+}
+
+#xtick1 {
+    margin-left: 25px;
+}
+
+#xtick2 {
+    margin-left: 50px;
+}
+
+#xtick3 {
+    margin-left: 75px;
+}
+
+#xtick4 {
+    margin-left: 100px;
+}
+
+#yAxis {
+    position: absolute;
+    margin-top: -10px;
+    margin-left: 20px;
+    width: 3px;
+    height: 100px;
+    background-color: black;
+}
+
+.yTick {
+    position: absolute;
+    height: 3px;
+    width: 13px;
+    background-color: black;
+    margin-left: -5px;
+}
+
+#ytick1 {
+    margin-top: 78px;
+}
+
+#ytick2 {
+    margin-top: 56px;
+}
+
+#ytick3 {
+    margin-top: 34px;
+}
+
+#ytick4 {
+    margin-top: 12px;
+}
+
+#xTitle {
+    positon: absolute;
+    margin-top: 7px;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+#yTitle {
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: -90px;
+    margin-left: -135px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    -webkit-transform: rotate(270deg);
+}
+
+.point {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: red;
+    border-color: red;
+}
+
+
+#point1 {
+    margin-left: 17px;
+    margin-top: 25px;
+    opacity: 0;
+}
+
+#line1Container {
+    position: absolute;
+    margin-left: -8px;
+    margin-top: -15px;
+    height: 45px;
+    width: 0px;
+    overflow: hidden;
+    -webkit-transition: width 1s;
+}
+
+#line1 {
+    width: 200px;
+    height: 75px;
+    border-top-left-radius: 200px;
+    border-style: solid;
+    margin-left: 20px;
+}
+
+#line2Container {
+    position: absolute;
+    margin-left: 70px;
+    margin-top: -20px;
+    height: 100px;
+    width: 0px;
+    overflow: hidden;
+    -webkit-transition: width 1s;
+}
+
+#line2 {
+    width: 30px;
+    height: 100px;
+    border-top-right-radius: 200px;
+    border-right-style: solid;
+    border-top-style: solid;
+    margin-left: 0px;
+    -webkit-transform: rotate(-20deg);
+}
+
+#point2 {
+    margin-left: 42px;
+    margin-top: -4px;
+    opacity: 0;
+}
+
+#point3 {
+    margin-left: 67px;
+    margin-top: -15px;
+    opacity: 0;
+}
+
+#point4 {
+    margin-left: 92px;
+    margin-top: 10px;
+    opacity: 0;
 }
 
 @-webkit-keyframes moveDash {
@@ -431,9 +747,9 @@ h2 {
 
 @-webkit-keyframes introNarration {
     from {opacity: 0;
-        margin-top: 95px;}
+        margin-top: 80px;}
     to {opactiy: 1;
-        margin-top 85px; }
+        margin-top 70px; }
 }
 
 @-webkit-keyframes appear {
