@@ -234,7 +234,7 @@ function nextSlide(button) {
                                   tannerSmile(10);}, 1000);
             break;
         case 14:
-            narration.innerHTML = "Looks like our friend's skin is getting a little to dark for comfort. Though she feels it looks better than how she looked before her first trip, her margial utility was only -13. That means her total utility is more than what she started with.";
+            narration.innerHTML = "Looks like our friend's skin is getting a little too dark for comfort. Though her margial utility this session was -13, she feels it looks better than how she looked before her first trip. That means her total utility is more than what she started with.";
             button.innerHTML = "Again?";
             tannerMove(100);
             document.getElementById("line2Container").style.width = "26px";
