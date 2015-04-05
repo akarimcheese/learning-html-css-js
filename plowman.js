@@ -21,7 +21,7 @@ function start() {
     document.getElementById("sign_year").style.color = "lightblue";
     document.getElementById("sign_name").style.color = "lightblue";
     
-    jim_head.src = "normal_right.png";
+    jim_head.src = "https://cloud.githubusercontent.com/assets/10968101/6997791/228ba610-db98-11e4-83e6-fbd6a8810ce9.png";
     jim.style.marginLeft = "700px";
     
     title.style.marginTop = "25px";
